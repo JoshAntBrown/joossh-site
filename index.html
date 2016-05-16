@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<div class="container">
+  {% for post in site.posts %}
+    {{ post.date | date: "%b %-d, %Y" }}
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  {% endfor %}
+</div>
