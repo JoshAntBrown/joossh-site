@@ -26,10 +26,16 @@ body {
   text-shadow: none;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(238, 238, 238, 0), rgba(238, 238, 238, 1), rgba(238, 238, 238, 0));
+}
+
 article.post {
   display: block;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 60px auto;
 }
 
 article h1 {
@@ -74,6 +80,28 @@ a:hover {
   color: #F9AF48;
 }
 
+.button {
+  color: #F9AF48;
+  border: 1px solid #F9AF48;
+  background: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 5px 10px;
+  font-weight: 300;
+  text-decoration: none;
+  transition: all .3s ease;
+
+  &:hover {
+    background: #F9AF48;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+a:hover button {
+  text-decoration: none !important;
+}
 
 body > header {
   display: block;
