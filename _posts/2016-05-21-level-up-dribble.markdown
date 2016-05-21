@@ -6,12 +6,12 @@ date:   2016-05-21 15:40:00 +0100
 
 As a web designer or developer it can sometimes be difficult to learn new skills or techniques. Especially if you're stuck building on the same website every day or just modifying existing themes for clients. Some times you just need something fresh, exciting and new.
 
-Whilst helping with todays Stamford Code Club at Haatch (a monthly event for all ages mostly aimed at teenagers that I help run with a few others), I took the decision to pick a random design from Dribble and decided to try and code it under an hour. This isn't something I've ever really done before but I wanted to create something different. It turned out to be quite good fun.
+Whilst helping with todays Stamford Code Club at Haatch (a monthly event for all ages mostly aimed at teenagers that I help run with a few others), I took the decision to pick a random design from Dribbble and decided to try and code it under an hour. This isn't something I've ever really done before but I wanted to create something different. It turned out to be quite good fun.
 
 ## The Challenge
-After a quick dabble through Dribble I came across a mobile app design for an Events App with a 'Tinder' style swipe interface for finding an event to attend, you can see it [here](https://dribbble.com/shots/2110032-App-for-events).
+After a quick dabble through Dribbble I came across a mobile app design for an Events App with a 'Tinder' style swipe interface for finding an event to attend, you can see it [here](https://dribbble.com/shots/2110032-App-for-events).
 
-![Dribble](https://d13yacurqjgara.cloudfront.net/users/149817/screenshots/2110032/app-6-nahlad.png)
+![Dribbble](https://d13yacurqjgara.cloudfront.net/users/149817/screenshots/2110032/app-6-nahlad.png)
 
 ## The Result
 So with the challenge set, I headed my way to [codepen.io](http://codepen.io) and put my fingers to keyboard. The end result isn't something that's perfect but that wasn't the goal, the goal was to have some fun and learn some new techniques and patterns I could apply in my work else where. For about 40 minutes of on and off work between helping out other people I'm quite happy with it.
@@ -57,4 +57,4 @@ The key to having the other cards stack in the way they do is by using a combina
 So yeah lots of lessons learnt about how I could have made the code cleaner using a different selector syntax, made it possible to nicely transition between cards if we were to add real swipe interactive functionality.
 
 ### Conclusion
-There's lots I took away from this exercise but above all it was a fun way to spend some time creating something. I could take things further especially down this web version of the card sort animation but I think I've learnt enough that if I ever needed to actually build something like that I'd know exactly what to do. If there's enough interest in what that looks like though I may create it for a future post! Definitely give this exercise a go yourselves though and see where you can get to, would love to see what you come up with. So go give Dribble a browse and get creating.
+There's lots I took away from this exercise but above all it was a fun way to spend some time creating something. I could take things further especially down this web version of the card sort animation but I think I've learnt enough that if I ever needed to actually build something like that I'd know exactly what to do. If there's enough interest in what that looks like though I may create it for a future post! Definitely give this exercise a go yourselves though and see where you can get to, would love to see what you come up with. So go give Dribbble a browse and get creating.
