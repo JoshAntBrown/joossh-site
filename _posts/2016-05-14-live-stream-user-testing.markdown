@@ -5,6 +5,8 @@ date:   2016-05-14 10:42:40 +0100
 ---
 User testing is an important part of researching and validating products and services. Most people aren’t doing it though. You might say it is too difficult to setup, or too expensive to run. You might have searched for it before, and found countless agencies and products to carry out user testing for thousands of pounds, maybe even more.
 
+![User Testing](/assets/live-stream-user-testing.jpg)
+
 You could always just run a user testing session without anything to record the session, but then how would you refer to what happened, how will you back up your points with hard research, how will you share your results with the rest of the team? If you are not recording the lessons from your user testing sessions, you may as well not be doing any user testing.
 
 So what if there was a way that you could broadcast the session to your team live, have it automatically saved into a video archive, in a way that would let the team see both the user and the screen of the device. What if you could do that with 5 things that you probably already have access to.
