@@ -1,0 +1,335 @@
+<html>
+  <head>
+    <title>Intro to Angular 2</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simples.css">
+    <link rel="stylesheet" href="lib/css/github.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/0.96/head.min.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Intro to Angular 2</h1>
+          <img src="./images/angular2-logo.svg" alt="" class="plain" />
+
+          <aside class="notes">
+            Hey, thanks for coming
+          </aside>
+        </section>
+
+        <section>
+          <h2>Josh Brown</h2>
+          <h3>Software Engineer - CTM Labs</h3>
+          <a href="http://www.twitter.com/joshantbrown">@JoshAntBrown</a>
+
+          <aside class="notes">
+            <p>I'm Josh, a software engineer in comparethemarket.</p>
+
+            <p>I've been working in the CTM Labs team on a new product for over a year now.</p>
+
+            <p>After our inital product validation process we took the decision to utilise Angular 2, despite it being in alpha and changing daily</p>
+
+            <p>
+              But it's now in beta and I want to share my experiences of working with Angular 2, how you can get started with it and what it has to offer.
+            </p>
+          </aside>
+        </section>
+
+        <section>
+          <h2>Motivation</h2>
+
+          <p>Web Standards</p>
+          <p>Performance</p>
+          <p>Simple Cognitive Model</p>
+
+          <aside class="notes">
+            Really the motivation for Angular2 comes down to these three points, web standards, performance and a simple cognitive model.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Angular was originally developed in 2009</h2>
+
+          <aside class="notes">
+            Back in 2009 a lot of the standards that exist now just didn't exist.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Web Standards</h2>
+          <p>
+            Shadow DOM replaces Transclusion
+          </p>
+
+          <p>
+            ES6 Modules replaces Angular Modules
+          </p>
+
+          <aside class="notes">
+            Play nice while the web evolves
+          </aside>
+        </section>
+
+        <section>
+          <h2>Performance</h2>
+          <img src="./images/ng-perf.png"/>
+          <aside class="notes">
+
+          </aside>
+        </section>
+
+        <section>
+          <h2>Simple Cognitive Model</h2>
+          <p>
+            Angular 1.x has many concepts
+          </p>
+
+          <p>
+            Concepts have a learning curve
+          </p>
+
+          <aside class="notes">
+            Play nice while the web evolves
+          </aside>
+        </section>
+
+        <section>
+          <h2>Angular 1.x Concepts</h2>
+          <ul>
+            <li>Controller</li>
+            <li>Factory</li>
+            <li>Service</li>
+            <li>Provider</li>
+            <li>Directive</li>
+            <li>Transclusion</li>
+            <li>Module</li>
+          </ul>
+
+          <aside class="notes">
+            <p>The Angular team had to create all these concepts to deal with holes in the old standards until now there was no standard way to handle any of these.</p>
+
+            <p>This led to a lot of confusing things to learn at first and the typical rollercoaster journey of learning Angular 1</p>
+          </aside>
+        </section>
+
+        <section>
+          <h2>Angular2 Component</h2>
+          <iframe height='400' scrolling='no' src='http://codepen.io/joshantbrown/embed/wGBorO/?height=400&theme-id=22537&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/joshantbrown/pen/wGBorO/'>wGBorO</a> by Josh Brown (<a href='http://codepen.io/joshantbrown'>@joshantbrown</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+        </section>
+
+        <section>
+          <h2>Typescript</h2>
+          <p>
+            Typescript = JavaScript (ES5) + ES6 + Types and Decorators
+          </p>
+          <img src="./images/typescript-diagram.png" class="plain" alt="" />
+        </section>
+
+        <section>
+          <h2>Annotations</h2>
+          <p>
+            An Angular 2 feature using decorators to append metadata to a class
+          </p>
+
+          <pre><code data-trim data-noescape>
+<mark>@Component({
+  selector: 'app'
+})</mark>
+export class App {}
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Transpilers to the rescue</h2>
+          <p>
+            Typescript 'transpiles' to vanilla JavaScript to run in the browser
+          </p>
+        </section>
+
+        <section>
+          <h2>ES5 Syntax</h2>
+          <pre><code data-trim class="javascript">
+var TodoApp = ng.core.Component({
+  selector: 'todo-app',
+  templateUrl: 'todo-app.html'
+}).Class({
+  constructor: function() {
+    this.tasks = [];
+  }
+});
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Template Syntax</h2>
+          <ul>
+            <li>{{}} = Interpolation</li>
+            <li>[] = Properties</li>
+            <li>() = Events</li>
+            <li># = Local Var</li>
+            <li>* = Template</li>
+          </ul>
+        </section>
+
+        <section>
+
+          <pre><code data-trim class="java javascript">
+import {Component, NgIf} from 'angular2/core';
+@Component({
+  selector: 'greeting',
+  templateUrl: 'greeting.html',
+  directives: [NgIf]
+})
+export class GreetingComponent {
+  name: string = 'World';
+  canChangeName: boolean = true;
+
+  changeName(name) {
+    this.name = name.value;
+    this.canChangeName = false;
+  }
+}
+          </code></pre>
+
+          <pre><code class="html">
+<div> Hello {{name}} </div>
+<div>
+    &lt;input #myName type="text"&gt;
+    <button
+        (click)="changeName($event, myName)"
+        [disabled]="!canChangeName">
+        Change Name
+    </button>
+    &lt;div *ngIf="!canChangeName"&gt;
+      Sorry, you can only change your name once.
+    &lt;/div&gt;
+</div>
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Bootstrapping</h2>
+        </section>
+
+        <section>
+          <h2>Angular 1.x Bootstrap</h2>
+          <ol>
+            <li>Create Module</li>
+            <li>Declare ng-app</li>
+            <li>Create Controller</li>
+            <li>Attach items to $scope</li>
+            <li>Declare Controller</li>
+            <li>Create Template</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Angular 1.x</h2>
+          <pre><code class="javascript">var app = angular.module('app', []);</code></pre>
+
+          <pre><code class="html">&lt;body ng-app=&quot;app&quot;&gt;&lt;/body&gt;</code></pre>
+        </section>
+
+        <section>
+          <pre><code class="javascript">
+app.controller('greeetingCtrl', function($scope) {
+  $scope.name = 'World';
+});
+          </code></pre>
+
+          <pre><code class="html">
+&lt;body ng-app=&quot;app&quot;&gt;
+  <div ng-controller="greetingCtrl">
+    Hello {{name}}
+  </div>
+&lt;/body&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Angular 2 Bootstrap</h2>
+          <ol>
+            <li>Create Component</li>
+            <li>Create Template</li>
+            <li>bootstrap</li>
+            <li>Transpilation</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Angular2 Bootstrap</h2>
+          <iframe height='400' scrolling='no' src='http://codepen.io/joshantbrown/embed/reaWEm/?height=400&theme-id=22537&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/joshantbrown/pen/reaWEm/'>Angular2 Typescript</a> by Josh Brown (<a href='http://codepen.io/joshantbrown'>@joshantbrown</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+        </section>
+
+        <section>
+          <h2>One more thing...</h2>
+        </section>
+
+        <section>
+          <h2>What about this line...</h2>
+          <pre><code data-noescape>import {bootstrap} from 'angular2<mark>/platform/browser</mark>';</code></pre>
+        </section>
+
+        <section>
+          <h2>Other Platforms?</h2>
+          <ul>
+            <li>Browsers</li>
+            <li>Web Workers</li>
+            <li>Server Rendering</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Server Rendering</h2>
+          <ul>
+            <li>SEO Friendly</li>
+            <li>Faster Browser Rendering</li>
+            <li>Better Accessibility Support</li>
+            <li>Code Once</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>
+            Thanks for listening!<br>
+            Any questions?
+          </h2>
+
+          <p>Check these out:</p>
+          <ul>
+            <li><a href="https://angular.io/">https://angular.io/</a></li>
+            <li><a href="http://blog.thoughtram.io/exploring-angular-2/">http://blog.thoughtram.io/exploring-angular-2/</a></li>
+            <li><a href="https://gitter.im/angular/angular">https://gitter.im/angular/angular</a></li>
+            <li><a href="https://github.com/angular/angular">https://github.com/angular/angular</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+          // Interpret Markdown in <section> elements
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+          // Syntax highlight for <code> elements
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+          // Zoom in and out with Alt+click
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+
+          // Speaker notes
+          { src: 'plugin/notes/notes.js', async: true },
+
+          // MathJax
+          { src: 'plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
