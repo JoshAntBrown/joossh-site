@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to setup, record, and live stream user feedback"
-date:   2016-05-14 10:42:40 +0100
+date:   2015-05-14 10:42:40 +0100
 ---
 User testing is an important part of researching and validating products and services. Most people aren’t doing it though. You might say it is too difficult to setup, or too expensive to run. You might have searched for it before, and found countless agencies and products to carry out user testing for thousands of pounds, maybe even more.
 
