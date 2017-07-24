@@ -21,7 +21,6 @@ permalink: /blog/:title
 
 exclude:
   - intro-to-angular2
-  - twitch
 
 # Build settings
 markdown: kramdown
